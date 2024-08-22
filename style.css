@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  
+  button {
+    position: absolute;
+    top: 50%;
+    &:first-child {
+      left: 0;
+      z-index: 1;
+    }
+    &:last-child {
+      right: 0;
+    }
+  }
+
+  .track {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    transition: 1s;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+  }
+
+}
